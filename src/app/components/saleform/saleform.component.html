@@ -1,0 +1,178 @@
+<app-header></app-header>
+
+<mat-card class="formBody">
+<mat-card-content>
+<form [formGroup]="cardioForm" (ngSubmit)="onSubmit()">
+    <mat-card>
+        <mat-card-title>
+            Cardio Vascular Data
+        </mat-card-title>
+        <mat-card-content>
+            <!-- <mat-grid-list cols="2" rowHeight="2:1">
+     
+                <mat-grid-tile> -->
+                    <mat-form-field>
+                            <mat-label>Record Id</mat-label>
+                            <input matInput formControlName="recId" required>
+                            <!-- <mat-error *ngIf="name.hasError('required')">
+                                    Input is required
+                            </mat-error> -->
+                    </mat-form-field>
+                    <br>
+                <!-- </mat-grid-tile>
+
+                <mat-grid-tile> -->
+                    <mat-form-field>
+                                <mat-label>Age</mat-label>
+                                <input matInput formControlName="age" required>
+                                <!-- <mat-error *ngIf="tags.hasError('required')">
+                                        Input is required
+                                </mat-error> -->
+                    </mat-form-field>
+                    <br>
+                <!-- </mat-grid-tile>
+
+                <mat-grid-tile> -->
+                        <mat-form-field>
+                                    <mat-label>Gender</mat-label>
+                                    <mat-select formControlName="gender" required>
+                                            <mat-option *ngFor="let g of gender" [value]="g">
+                                            {{g}}
+                                            </mat-option>
+                                            <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                                <mat-error *ngIf="gender.hasError('required')">
+                                                        Input is required
+                                                </mat-error>
+                                            </div> -->
+                                    </mat-select>
+                            </mat-form-field>
+                            <br>
+                <!-- </mat-grid-tile>
+
+                <mat-grid-tile> -->
+                        <mat-form-field>
+                                <mat-label>Height</mat-label>
+                                <input matInput formControlName="height" required>
+                                <!-- <mat-error *ngIf="quantity.hasError('required')">
+                                        Input is required
+                                </mat-error> -->
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Weight</mat-label>
+                                <input matInput formControlName="weight" required>
+                                <!-- <mat-error *ngIf="quantity.hasError('required')">
+                                        Input is required
+                                </mat-error> -->
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Systolic BP</mat-label>
+                                <input matInput formControlName="aphi" required>
+                                <!-- <mat-error *ngIf="quantity.hasError('required')">
+                                        Input is required
+                                </mat-error> -->
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Diastolic BP</mat-label>
+                                <input matInput formControlName="aplo" required>
+                                <!-- <mat-error *ngIf="quantity.hasError('required')">
+                                        Input is required
+                                </mat-error> -->
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Cholesterol</mat-label>
+                                <mat-select formControlName="cholesterol" required>
+                                        <mat-option *ngFor="let c of cholesterol" [value]="c">
+                                        {{c}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Glucose</mat-label>
+                                <mat-select formControlName="gluc" required>
+                                        <mat-option *ngFor="let g of gluc" [value]="g">
+                                        {{g}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Smokes</mat-label>
+                                <mat-select formControlName="smoke" required>
+                                        <mat-option *ngFor="let c of smokes" [value]="c">
+                                        {{c}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Drinks</mat-label>
+                                <mat-select formControlName="alco" required>
+                                        <mat-option *ngFor="let c of drinks" [value]="c">
+                                        {{c}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Active</mat-label>
+                                <mat-select formControlName="active" required>
+                                        <mat-option *ngFor="let c of active" [value]="c">
+                                        {{c}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <mat-form-field>
+                                <mat-label>Has Cardio Vascular Disease</mat-label>
+                                <mat-select formControlName="cardio" required>
+                                        <mat-option *ngFor="let c of cardio" [value]="c">
+                                        {{c}}
+                                        </mat-option>
+                                        <!-- <div *ngIf="gender.invalid && (gender.dirty || gender.touched)">
+                                        <mat-error *ngIf="gender.hasError('required')">
+                                                Input is required
+                                        </mat-error>
+                                        </div> -->
+                                </mat-select>
+                        </mat-form-field>
+                        <br>
+                        <button mat-button type="submit">Enter</button>
+        </mat-card-content>
+    </mat-card>
+
+    
+
+</form>
+</mat-card-content>
+</mat-card>
+

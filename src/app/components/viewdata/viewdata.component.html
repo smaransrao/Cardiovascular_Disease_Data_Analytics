@@ -1,0 +1,33 @@
+<app-header></app-header>
+
+<!-- <mat-grid-list cols="1" rowHeight="1:1">
+    <mat-grid-tile> -->
+        <mat-card>
+            <mat-card-title>
+                Search Record
+            </mat-card-title>
+            <mat-card-content>
+                <form [formGroup]="searchForm" (ngSubmit)="onSpecific()"> 
+                <mat-form-field>
+                    <mat-label>Field</mat-label>
+                    <mat-select formControlName="field" required>
+                            <mat-option *ngFor="let f of fields" [value]="f">
+                            {{f}}
+                            </mat-option>
+                    </mat-select>
+                </mat-form-field>
+                &nbsp;
+                <mat-form-field>
+                    <mat-label>Value</mat-label>
+                    <input matInput formControlName="val">            
+                </mat-form-field>
+                &nbsp;
+                <button mat-raised-button type="submit">Enter</button>
+                </form>
+                <button mat-raised-button (click)="onAll()">Retrieve all</button>
+            </mat-card-content>
+        </mat-card>
+    <!-- </mat-grid-tile>    
+</mat-grid-list> -->
+
+

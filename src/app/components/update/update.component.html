@@ -1,0 +1,47 @@
+<app-header></app-header>
+
+<!-- <mat-grid-list cols="1" rowHeight="1:1">
+        <mat-grid-tile> -->
+            <mat-card>
+                <mat-card-title>
+                    Update Record
+                </mat-card-title>
+                <mat-card-content>
+                    <form [formGroup]="searchForm" (ngSubmit)="onUpdate()"> 
+                    <mat-form-field>
+                        <mat-label>Search Field</mat-label>
+                        <mat-select formControlName="field" required>
+                                <mat-option *ngFor="let f of fields" [value]="f">
+                                {{f}}
+                                </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    &nbsp;
+                    <mat-form-field>
+                        <mat-label>Value</mat-label>
+                        <input matInput formControlName="val">            
+                    </mat-form-field>
+                    &nbsp;
+                    <mat-form-field>
+                        <mat-label>Update Field</mat-label>
+                        <mat-select formControlName="fieldUpdated" required>
+                                <mat-option *ngFor="let f1 of fields" [value]="f1">
+                                {{f1}}
+                                </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                    &nbsp;
+                    <mat-form-field>
+                        <mat-label>Value</mat-label>
+                        <input matInput formControlName="newValue">            
+                    </mat-form-field>
+                    &nbsp;
+                    <button mat-raised-button type="submit">Enter</button>
+                    </form>
+                </mat-card-content>
+            </mat-card>
+        <!-- </mat-grid-tile>    
+    </mat-grid-list> -->
+    
+    
+    

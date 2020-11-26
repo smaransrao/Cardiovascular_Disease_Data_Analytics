@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+<mat-card>
+        <mat-card-title>
+            Display All
+        </mat-card-title>
+        <mat-card-content>
+        <div>
+        <table border="1" *ngIf="found">
+            <tr>
+                    <th>ID</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Height</th>
+                    <th>Weight</th>
+                    <th>Sys BP</th>
+                    <th>Dia BP</th>
+                    <th>Cholesterol</th>
+                    <th>Glucose</th>
+                    <th>Smoker</th>
+                    <th>Alcoholic</th>
+                    <th>Active</th>
+                    <th>Cardio Vasular Disease</th>
+                    
+            </tr>
+            <tr *ngFor="let fnd of found">
+                <td>{{fnd.recId}}</td>
+                <td>{{fnd.age}}</td>
+                <td>{{fnd.gender}}</td>
+                <td>{{fnd.height}}</td>
+                <td>{{fnd.weight}}</td>
+                <td>{{fnd.aphi}}</td>
+                <td>{{fnd.aplo}}</td>
+                <td>{{fnd.cholesterol}}</td>
+                <td>{{fnd.gluc}}</td>
+                <td>{{fnd.smoke}}</td>
+                <td>{{fnd.alco}}</td>
+                <td>{{fnd.active}}</td>
+                <td>{{fnd.cardio}}</td>
+            </tr>
+        </table>
+    </div>
+</mat-card-content>
+</mat-card>
