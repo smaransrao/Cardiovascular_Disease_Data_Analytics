@@ -6,11 +6,15 @@ Front end - Angular v8
 Back end - Nodejs and Express
 Database - MongoDB with Atlas interface
 
+To run the application in local host, in two seperate terminals run:
+1. nodemon api/server.js //Starts nodejs backend server
+2. npm run proxy //Starts angular application
+
 Developer tips:
  - Application is best run on IDE like visual studio
  - If using MongoDB Atlas as the database interface, make sure to enter the correct credentials* in the dbconfig.js file provided in the api/app/config folder
  
-*You must first create an account in Atlas if you don't already have one and then create a database. After that you must import any dataset of your choice. Then you will be able to retrieve the credentials of the same database to link it with this application.
+*You must first create an account in Atlas if you don't already have one and then create a database. After that you must import any dataset of your choice. Then you will be able to retrieve the connection string of the same database to link it with this application.
 
 ## Development server
 
